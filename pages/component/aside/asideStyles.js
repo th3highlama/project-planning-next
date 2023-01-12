@@ -8,16 +8,17 @@ export const AsideWrapper = styled.div`
     color: #aeaeae;
     padding: 20px 0;
     font-weight: 300;
+    box-sizing: border-box;
 `;
 
 export const AsideController = styled.div`
-    width: 45px;
-    height: 45px;
+    width: 24px;
+    height: 24px;
     border: 2px solid #ededed;
     background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
-    left: calc(20rem - 23px);
+    left: calc(20rem - 12px);
 `;
 
 export const AsideLogo = styled.div`

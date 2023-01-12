@@ -1,21 +1,62 @@
 import styled from 'styled-components';
 
-export const header = styled.div``;
+export const HeaderWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 0 0;
+    flex-wrap: wrap-reverse;
+`;
 
-export const headerLeft = styled.div``;
+export const HeaderLeft = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+`;
 
-export const headerFilterView = styled.div``;
+export const HeaderFilterView = styled.div`
+    color: ${props => props.isActive ? '#13ae3f' : '#aeaeae'};
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+`;
 
-export const headerFilterIcon = styled.div``;
+export const HeaderFilterIcon = styled.div`
+    margin-right: 10px;
+`;
 
-export const headerFilterText = styled.span``;
+export const HeaderFilterText = styled.span``;
 
-export const headerRight = styled.div``;
+export const HeaderRight = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    line-height: 26px;
+    margin-bottom: 20px;
+`;
 
-export const headerSearchBar = styled.div``;
+export const HeaderSearchBar = styled.input`
+    margin-right: 20px;
+    margin-left: 20px;
+`;
 
-export const headerMessages = styled.div``;
+export const HeaderMessages = styled.div`
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+`;
 
-export const headerNotifications = styled.div``;
+export const HeaderNotifications = styled.div`
+    margin-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+`;
 
-export const headerUserProfile = styled.div``;
+export const HeaderUserProfile = styled.div`
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-top: -4px;
+`;
