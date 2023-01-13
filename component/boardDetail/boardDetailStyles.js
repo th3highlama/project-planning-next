@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const BoardDetailWrapper = styled.div`
     display: flex;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #ededed;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: #ffffff;
 `;
 
 export const BoardDetailHeading = styled.div`
