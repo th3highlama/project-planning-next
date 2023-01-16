@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const AsideWrapper = styled.div`
     background-color: #ffffff;
-    width: 20rem;
+    width: ${props => props.fullView ? '20rem': '5rem'};
     min-height: 100vh;
     border-right: 2px solid #ededed;
     color: #aeaeae;
     padding: 20px 0;
     font-weight: 300;
     box-sizing: border-box;
+    position: relative;
 `;
 
 export const AsideController = styled.div`
@@ -18,7 +19,8 @@ export const AsideController = styled.div`
     background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
-    left: calc(20rem - 12px);
+    right: -12px;
+    z-index: 10;
     cursor: pointer;
 `;
 

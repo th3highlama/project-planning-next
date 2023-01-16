@@ -1,18 +1,21 @@
+import { useState } from 'react';
+
 import { FaBolt, FaCheck, FaBorderAll, FaRegClipboard, FaRegCalendar, FaUserFriends, FaRegChartBar, FaFolder } from 'react-icons/fa';
 import { AsideWrapper, AsideController, AsideLogo, AsideItemGroup, AsideItem, AsideLeftWrapper, AsideItemIcon, AsideItemText, AsideItemCount, AsideItemSubItem, AsideItemSubItemBorder, AsideItemSubItemIcon, AsideItemSubItemText } from './asideStyles';
 
 function Aside() {
+  const [fullView, setFullView] = useState(0);
     return (
-      <AsideWrapper>
-        <AsideController />
-        <AsideLogo>Logo!</AsideLogo>
+      <AsideWrapper fullView={fullView}>
+        <AsideController onClick={() => setFullView(!fullView)}/>
+        {fullView && <AsideLogo>Logo!</AsideLogo>}
         <AsideItemGroup>
           <AsideItem>
             <AsideLeftWrapper>
               <AsideItemIcon>
                 <FaBolt />
               </AsideItemIcon>
-              <AsideItemText>Activity</AsideItemText>
+              {fullView && <AsideItemText>Activity</AsideItemText>}
             </AsideLeftWrapper>
           </AsideItem>
           <AsideItem>
@@ -20,9 +23,9 @@ function Aside() {
               <AsideItemIcon>
                 <FaCheck />
               </AsideItemIcon>
-              <AsideItemText>My Task</AsideItemText>
+              {fullView && <AsideItemText>My Task</AsideItemText>}
             </AsideLeftWrapper>
-            <AsideItemCount>15</AsideItemCount>
+            {fullView && <AsideItemCount>15</AsideItemCount>}
           </AsideItem>
         </AsideItemGroup>
         <AsideItemGroup>
@@ -31,7 +34,7 @@ function Aside() {
               <AsideItemIcon>
                 <FaBorderAll/>
               </AsideItemIcon>
-              <AsideItemText>Dashboard</AsideItemText>
+              {fullView && <AsideItemText>Dashboard</AsideItemText>}
             </AsideLeftWrapper>
           </AsideItem>
           <AsideItem isActive={true} >
@@ -39,10 +42,10 @@ function Aside() {
               <AsideItemIcon isActive={true} >
                 <FaRegClipboard />
               </AsideItemIcon>
-              <AsideItemText isActive={true} >Project</AsideItemText>
+              {fullView && <AsideItemText isActive={true} >Project</AsideItemText>}
             </AsideLeftWrapper>
           </AsideItem>
-          <AsideItemSubItem isActive={true} >
+          {fullView && (<><AsideItemSubItem isActive={true} >
             <AsideItemSubItemBorder />
             <AsideItemSubItemIcon>
               <FaFolder />
@@ -55,13 +58,13 @@ function Aside() {
               <FaFolder />
             </AsideItemSubItemIcon>
             <AsideItemSubItemText>Mobile Application</AsideItemSubItemText>
-          </AsideItemSubItem>
+          </AsideItemSubItem></>)}
           <AsideItem>
             <AsideLeftWrapper>
               <AsideItemIcon>
                 <FaRegCalendar />
               </AsideItemIcon>
-              <AsideItemText>Calendar</AsideItemText>
+              {fullView && <AsideItemText>Calendar</AsideItemText>}
             </AsideLeftWrapper>
           </AsideItem>
           <AsideItem>
@@ -69,7 +72,7 @@ function Aside() {
               <AsideItemIcon>
                 <FaUserFriends />
               </AsideItemIcon>
-              <AsideItemText>Teams</AsideItemText>
+              {fullView && <AsideItemText>Teams</AsideItemText>}
             </AsideLeftWrapper>
           </AsideItem>
           <AsideItem>
@@ -77,7 +80,7 @@ function Aside() {
               <AsideItemIcon>
                 <FaRegChartBar />
               </AsideItemIcon>
-              <AsideItemText>Analytics</AsideItemText>
+              {fullView && <AsideItemText>Analytics</AsideItemText>}
             </AsideLeftWrapper>
           </AsideItem>
         </AsideItemGroup>

@@ -40,7 +40,7 @@ const CardCount = styled.div`
     border-radius: 50%;
 `;
 const TaskList = styled.div`
-    padding: 8px;
+    padding: 8px 0 0 8px;;
     // background-color: ${props => (props.isDraggingOver ? '#fbfbfb' : '#ffffff')};
     min-height:100px;
 `;
