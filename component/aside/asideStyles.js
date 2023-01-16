@@ -19,6 +19,7 @@ export const AsideController = styled.div`
     border-radius: 50%;
     position: absolute;
     left: calc(20rem - 12px);
+    cursor: pointer;
 `;
 
 export const AsideLogo = styled.div`
@@ -26,12 +27,12 @@ export const AsideLogo = styled.div`
     margin-left: 25px;
 `;
 
-export const AsideItemGroup = styled.div`
+export const AsideItemGroup = styled.ul`
     border-bottom: 1px solid #ededed;
     padding: 10px 0;
 `;
 
-export const AsideItem = styled.div`
+export const AsideItem = styled.li`
     background-color: ${props => props.isActive ? '#eaffef' : '#ffffff'};
     border-left: 4px solid ${props => props.isActive ? '#13ae3f' : '#ffffff'};
     display: flex;
@@ -45,6 +46,7 @@ export const AsideItem = styled.div`
 export const AsideLeftWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 `;
 
 export const AsideItemIcon = styled.div`
@@ -69,6 +71,7 @@ export const AsideItemCount = styled.div`
     font-size: 0.66rem;
     margin-top: -8px;
     font-weight: 500;
+    cursor: pointer;
 `;
 
 export const AsideItemController = styled.div``;
@@ -82,6 +85,7 @@ export const AsideItemSubItem = styled.div`
     position: relative;
     height: 30px;
     margin-left: 25px;
+    cursor: pointer;
 `;
 
 export const AsideItemSubItemBorder = styled.div`

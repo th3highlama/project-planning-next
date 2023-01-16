@@ -1,10 +1,11 @@
 import React from 'react'
 import { Draggable } from 'react-beautiful-dnd'
+import { FaPaperclip, FaFlag, FaClock, FaRegCommentDots } from 'react-icons/fa';
 
-import { Container, CategoryWrapper, Priority, TaskTitle, TaskDescription, TaskActionWrapper, TaskLeft, TaskAttachment, TaskFlag, TaskDate, TaskRight, TaskMessage } from './taskStyles'
+
+import { Container, CategoryWrapper, Priority, TaskTitle, TaskDescription, TaskActionWrapper, TaskLeft, TaskActionLabel, TaskAttachment, TaskFlag, TaskDate, TaskRight, TaskMessage } from './taskStyles'
 
 function Task(props) {
-    console.log("Props", props);
     return (
         <Draggable draggableId={props.task.id} index={props.index}>
             {(provided, snapshot) => (
@@ -22,12 +23,20 @@ function Task(props) {
                     <TaskDescription>{props.task.desc}</TaskDescription>
                     <TaskActionWrapper>
                         <TaskLeft>
-                            <TaskAttachment></TaskAttachment>
-                            <TaskFlag></TaskFlag>
-                            <TaskDate></TaskDate>
+                            <TaskAttachment>
+                                <FaPaperclip /><TaskActionLabel>3</TaskActionLabel>
+                            </TaskAttachment>
+                            <TaskFlag flag={props.task.flag}>
+                                <FaFlag />
+                            </TaskFlag>
+                            <TaskDate>
+                                <FaClock /> <TaskActionLabel>Mar 23</TaskActionLabel>
+                            </TaskDate>
                         </TaskLeft>
                         <TaskRight>
-                            <TaskMessage></TaskMessage>
+                            <TaskMessage>
+                                <FaRegCommentDots /><TaskActionLabel>3</TaskActionLabel>
+                            </TaskMessage>
                         </TaskRight>
                     </TaskActionWrapper>
                 </Container>

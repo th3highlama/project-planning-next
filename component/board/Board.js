@@ -8,6 +8,8 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 
 const Container = styled.div`
     display : flex;
+    max-height: calc(100vh - 120px);
+    overflow-y: scroll;
 `
 
 function Board() {
@@ -16,8 +18,6 @@ function Board() {
     useEffect(() => {
         setwinReady(true);
     }, []);
-
-  console.log("Got data", data);
 
   const onDragEnd = result => {
     const { destination, source, draggableId, type } = result;

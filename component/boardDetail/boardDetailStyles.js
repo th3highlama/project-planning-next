@@ -42,6 +42,7 @@ export const BoardDetailLock = styled.div`
     display: flex;
     color: #373737;
     margin-right: 20px;
+    cursor: pointer;
 `;
 
 export const BoardDetailLockStatus = styled.div`
@@ -59,10 +60,12 @@ export const BoardDetailCollaborator = styled.div`
     border: 1px solid;
     border-radius: 50%;
     margin-right: -7px;
+    cursor: pointer;
 `;
 
 export const BoardDetailCollaboratorCount = styled.div`
     margin-right: 10px;
+    cursor: pointer;
 `;
 
 export const BoardDetailCollaboratorAddition = styled.div`
@@ -73,4 +76,5 @@ export const BoardDetailCollaboratorAddition = styled.div`
     margin-right: 30px;
     text-align: center;
     line-height: 22px;
+    cursor: pointer;
 `;

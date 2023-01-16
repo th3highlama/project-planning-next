@@ -22,6 +22,7 @@ export const HeaderFilterView = styled.div`
     margin-left: 20px;
     border-bottom: 3px solid ${props => props.isActive ? '#13ae3f' : '#ffffff'};
     padding: 0 5px;
+    cursor: pointer;
 `;
 
 export const HeaderFilterIcon = styled.div`
@@ -50,12 +51,14 @@ export const HeaderMessages = styled.div`
     margin-right: 20px;
     font-size: 1.2rem;
     font-weight: 700;
+    cursor: pointer;
 `;
 
 export const HeaderNotifications = styled.div`
     margin-right: 20px;
     font-size: 1.2rem;
     font-weight: 700;
+    cursor: pointer;
 `;
 
 export const HeaderUserProfile = styled.div`
@@ -65,4 +68,5 @@ export const HeaderUserProfile = styled.div`
     border-radius: 50%;
     margin-right: 30px;
     margin-top: -4px;
+    cursor: pointer;
 `;
