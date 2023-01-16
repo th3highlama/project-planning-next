@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const AsideWrapper = styled.div`
     background-color: #ffffff;
-    width: ${props => props.fullView ? '20rem': '5rem'};
+    // width: ${props => props.fullView ? '20rem': '5rem'};
+    width: 20rem;
     min-height: 100vh;
     border-right: 2px solid #ededed;
     color: #aeaeae;
