@@ -4,10 +4,10 @@ import { FaBolt, FaCheck, FaBorderAll, FaRegClipboard, FaRegCalendar, FaUserFrie
 import { AsideWrapper, AsideController, AsideLogo, AsideItemGroup, AsideItem, AsideLeftWrapper, AsideItemIcon, AsideItemText, AsideItemCount, AsideItemSubItem, AsideItemSubItemBorder, AsideItemSubItemIcon, AsideItemSubItemText } from './asideStyles';
 
 function Aside() {
-  const [fullView, setFullView] = useState(0);
+  const [fullView, setFullView] = useState(1);
     return (
       <AsideWrapper fullView={fullView}>
-        <AsideController onClick={() => setFullView(!fullView)}/>
+        <AsideController onClick={() => setFullView(1)}/>
         {fullView && <AsideLogo>Logo!</AsideLogo>}
         <AsideItemGroup>
           <AsideItem>
